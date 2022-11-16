@@ -30,10 +30,10 @@ books.push(b6);
 
 function findBooks(press) {
 //같은값 있으면
-
+let bbb = []
     for (let book of books ) {
-        if (book = press) {
-            return book
+        if (book == press,book) {
+            bbb.push
         }
     }
 }
