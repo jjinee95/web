@@ -15,15 +15,22 @@ console.log(names);
 
 let inval = prompt('이름입력: ')
 
-function removeName(name) {
-   for (name of names) {
-        if (name == inval) {
-            name.splice
-        }
-   } 
-   
+if (inval) {
+    removeName(inval);
 }
+
+function removeName(name) {
+    let idx = names.indexOf(name); // 입력받은 이름의 위치값.
+    names.splice(idx, 1);
+
+    console.log(names);
+}
+
 removeName(inval)
+
+
+
+
 
 
 
