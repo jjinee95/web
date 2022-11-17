@@ -29,7 +29,15 @@ function loadCallback() {
 }*/
 
 function modifyFnc () {
-    
+    let name = document.getElementById('name').value;
+    let age = document.getElementById('age').value;
+
+    let targetTr = document.querySelectorAll('tbody tr'); //대상이 되는 tr선택
+    for (let tr of targetTr) {
+        if (tr.children[0].innerText == name) {
+            tr.children[1].innerText == age;
+        }
+    }
 }
 
 
