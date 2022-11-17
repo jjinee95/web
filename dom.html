@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom.html</title>
+    <style>
+        div {
+            width: 60%;
+            height: 250px;
+            background-color: yellow;
+        }
+
+        span {
+            display: inline-block;
+            width: 100px;
+            padding: 2px;
+            background-color: aquamarine;
+            margin: 2px;
+        }
+
+</style>    
+</head>
+<body>
+    <div id="show">
+
+    </div>
+    <input type="text" id="write" value="Lorem"><button id="btn">삭제</button>
+    <script>
+    let words = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque. At aperiam aliquid odio eos voluptas laudantium? Quos aspernatur eveniet assumenda eos incidunt, mollitia, rerum est praesentium maxime, earum dicta."
+    let wordAry = words.split(' '); //<span>Lorem</span>
+    let show = document.getElementById('show');
+    for(let word of wordAry) {
+        let span = document.createElement('span');
+        span.innerText = word;
+        show.append(span);
+    }
+    // 버튼에 클릭 이벤트 등록해서.. 사용자가 입력한 값이라 같은 span 찾아서 display = 'none';
+
+    //document.querySelector('span').style.display ='none';
+    
+    document.getElementById('write').addEventListener('change', function() {
+           let userInput = document.querySelector('#write').value;
+           let spans = document.querySelectorAll('span'); //화면의 스판 전체 선택
+           console.log(spans)
+           for (let span of spans) {
+            if (span.innerText == userInput) {
+                span.style.opacity = 0;
+            }
+        }      
+        document.querySelector('#write').value = '';     
+        console.log(userInput)
+    });
+
+    </script>
+</body>
+</html>

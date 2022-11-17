@@ -66,7 +66,7 @@ console.log(beasts);
 // splice(위치인덱스, 대체할 요소 크기, 대체값) : 배열에 값 추가(push, unshift), 제거() pop, shift) 합친 것
 // beasts.splice(beasts.length, 0, 'pig'); // 제일 마지막크기에 대체할크기 0 -> 단순 추가
 //beasts.splice(0, 1, 'pig'); //0번째 인덱스 하나 pig로 대체 : ant -> pig 로 대체
-beasts.splice(0, 2, 'bison', 'ant');
+beasts.splice(0, 2, 'bison', 'ant'); 
 console.log(beasts);
 
 

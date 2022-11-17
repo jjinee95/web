@@ -5,31 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        th{
-            border: 1px solid black;
-        }
-        td {
-            padding: 5px;
-            border: 1px solid black;
-            text-align: center;
-        }
-        tr:nth-of-type(2n){
-            background-color:yellow
-        }
-        tr:nth-of-type(2n+1){
-            background-color:pink
-        }
-        tr:nth-last-child(){
-            color: white;
-            background-color: black;
-
-        }
-       
-    </style>
-    
+    <link rel="stylesheet" href="css/cust_style.css">
+    <script src="js/dom3.js"></script>
 </head>
 <body>
-    <script src="lastExample.js"></script>
+
+    이름: <input type ="text" name="name" id="name"><br>
+    나이 : <input type="number" name="age" id="age"><br>
+    생일 : <input type="date" name="birth" id="birth"><br>
+    <!--button#btn{클릭}-->
+    <button id="btn">추가</button>
+    <button id="delBtn">선택삭제</button>
+    <button id="modBtn">변경</button>
+
+    <!--돔2<div class="show">
+        <ul id="list"></ul>
+    </div>-->
+
+    <div class="show">
+        <table id="list"> 
+            <!-- <thead><tr><th>이름</th><th>나이</th><th>생일</th></tr></thead>-->
+
+        </table>
+    </div>
+
+
+    <!--<script src="js/dom2.js"></script>-->
 </body>
 </html>
